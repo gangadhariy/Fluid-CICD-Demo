@@ -29,7 +29,7 @@ def home():
 @app.route("/health")
 def health():
 
-    return "UP", 200
+    return "UP and Running", 200
 
 
 @app.route("/database")
