@@ -8,6 +8,7 @@ pipeline {
             steps {
                 sh '''
                     cd Backend
+                    ls
                     docker build -t ${DOCKER_IMAGE}:${BUILD_ID} .'
                     echo 'Image builded susccessfully
                    '''
