@@ -21,7 +21,7 @@ def home():
 
     return jsonify(
         {
-            "message": "Python API is running"
+            "message": "Python API is running Successfully"
         }
     )
 
