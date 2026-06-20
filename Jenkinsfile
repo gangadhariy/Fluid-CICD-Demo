@@ -22,7 +22,7 @@ pipeline {
         }
         stage('Scan the docker image') {
             steps {
-                sh 'trivy image --sevirity HIGH, CRITICAL --exit-code 1 ${DOCKER_IMAGE}:${BUILD_ID}'
+                sh 'trivy image --sevirity HIGH,CRITICAL --exit-code 1 ${DOCKER_IMAGE}:${BUILD_ID}'
             }
         }
         stage('Docker push') {
