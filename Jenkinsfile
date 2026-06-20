@@ -6,8 +6,11 @@ pipeline {
     stages {
         stage('Build the code with docker') {
             steps {
-                sh 'docker build -it ${DOCKER_IMAGE}:${BUILD_ID}'
-                echo 'Image builded susccessfully'
+                sh '''
+                    cd Backend
+                    docker build -it ${DOCKER_IMAGE}:${BUILD_ID}'
+                    echo 'Image builded susccessfully
+                   '''
             }
         }
         stage('Docker login') {
