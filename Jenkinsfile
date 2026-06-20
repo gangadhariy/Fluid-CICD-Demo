@@ -9,7 +9,7 @@ pipeline {
                 sh '''
                     cd Backend
                     docker build -t ${DOCKER_IMAGE}:${BUILD_ID} .
-                    echo 'Image builded susccessfully
+                    echo 'Image builded susccessfully'
                    '''
             }
         }
