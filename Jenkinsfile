@@ -47,4 +47,14 @@ pipeline {
             }
         }
     }
+    post {
+        success {
+            echo 'Pipeline executed successfully! Triggering the deployment job...'
+            cleanWs()
+        }
+        failure {
+            echo 'Pipeline failed. Please check the logs for errors.'
+        }
+        
+    }      
 }
